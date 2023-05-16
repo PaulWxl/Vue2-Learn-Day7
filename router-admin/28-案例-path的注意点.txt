@@ -1,0 +1,4 @@
+重定向/home
+{path: '/home', redirect: '/home/users', ......}
+
+注意url 地址中不要出现大写字母。所以 path 中不要出现大写字母。

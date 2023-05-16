@@ -1,0 +1,4 @@
+npm install vue-router@3.5.2 --save 
+一定要记得指定版本，且放在dependencies 中， --save!!!
+在 src 中建立路由(router)文件夹，创建 index.js 路由文件。
+注意别忘了使用 Vue.use() - Vue-Router属于Vue插件和第三方库。

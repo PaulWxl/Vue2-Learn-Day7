@@ -1,0 +1,11 @@
+路由配置：
+routes: [
+    {path: '/', redirect: '/login'},
+    {path: '/login', component: MyLoginVue}
+  ]
+
+App.vue 中
+<template>
+  <!-- 一定要有路由占位符 -->
+  <router-view></router-view>
+</template>

@@ -1,0 +1,2 @@
+$route 可以指向 params, query, path, fullPath
+注意 path 和 fullPath 的区别是， fullPath 包括了查询参数， 而 path 一般只包括路径参数。

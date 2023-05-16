@@ -1,0 +1,16 @@
+<tbody>
+        <tr v-for="item in userlist" :key="item.id">
+          <td>{{ item.id }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.age }}</td>
+          <td>{{ item.position }}</td>
+          <td>
+            <a href="###" @click.prevent="gotoDetail">详情</a>
+          </td>
+        </tr>
+</tbody>
+
+
+gotoDetail() {
+      this.$router.push('/home/userdetail')
+}

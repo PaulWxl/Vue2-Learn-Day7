@@ -1,0 +1,14 @@
+gotoDetail函数中传入 id
+gotoDetail(id) {
+      // 注意，配置路由时才用:传路径参数，这里应该是 +
+      this.$router.push('/home/userdetail/' + id)
+}
+
+路由配置：一定要注意要加 props: true 
+{path: 'userdetail/:id', component: MyUserDetail, props: true}
+
+MyUserDetail组件：
+props: ['id']
+
+使用id：
+<h4 class="text-center">用户详情---{{ id }}</h4>

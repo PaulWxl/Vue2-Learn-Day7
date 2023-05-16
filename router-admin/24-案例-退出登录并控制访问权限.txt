@@ -1,0 +1,21 @@
+给[退出登录]按钮绑定点击事件
+logout() {
+      // 清空 token
+      localStorage.removeItem('token')
+      // 跳转到登录页
+      this.$router.replace('/login')
+}
+控制访问权限： 全局前置守卫
+// 全局前置守卫 - 有 token 才能访问登录页面
+router.beforeEach((to, from, next) => {
+  if (to.path === '/home') {
+    const token = localStorage.getItem('token')
+    if (token) {
+      next()
+    } else {
+      next('/login') // 强制跳转到登录页      
+    }
+  } else {
+    next() // 放行
+  }
+})

@@ -1,0 +1,19 @@
+ 给[登录]按钮绑定 login 方法， 给[重置]按钮绑定 reset 方法。
+ reset() {
+      // 在 methods 里面直接使用 this ，就可以调用组件的 data() 中的数据
+      this.username = ''
+      this.password = ''
+    },
+login() {
+      // 这里没调接口，假设用户名就是 admin 了和密码就是 666666 了
+      if (this.username === 'admin' && this.password === '666666') {
+        // 存储 token
+        localStorage.setItem('token', 'Bearer xxxx')
+        // 跳转到后台主页（假设是 /home）
+        this.$router.push('/home')
+      } else {
+        // 登录失败，第一步： 清空 token
+        localStorage.removeItem('token')
+        alert('账号或密码错误！')
+      }
+    }

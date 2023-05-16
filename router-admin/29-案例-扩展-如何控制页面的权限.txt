@@ -1,0 +1,16 @@
+定义一个数组，使用indexof
+router.beforeEach((to, from, next) => {
+  const pathArr = ['/home', '/home/users', '/home/rights', '/home/goods', '/home/orders', '/home/settings']
+  if (pathArr.includes(to.path) === true) {
+    const token = localStorage.getItem('token')
+    if (token) {
+      next()
+    } else {
+      next('/login') // 强制跳转到登录页      
+    }
+  } else {
+    next() // 放行
+  }
+})
+
+也可以把 pathArr 单独定义为一个 js 文件

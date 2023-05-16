@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 通过children属性声明子路由  在src/router/index.js 路由模块中，导入需要的组件，并使用children 属性声明子路由规则：
+  
+    // 如果想要嵌套组件，必须用 children 属性--- children 是一个 数组--- 里面还是{path: , component: }
+    {path: '/about', component: About, children: [
+      // 注意， path 不能加 #
+      {path: 'tab1', component: Tab1},
+      {path: 'tab2', component: Tab2}
+    ]},
+   
+    About组件中：
+
+    // 注意嵌套路由 path 前面要加 /about
+    <router-link to="/about/tab1">tab1</router-link>
+    <router-link to="/about/tab2">tab2</router-link>
+    <hr />
+
+    <router-view></router-view>
+
+
+  -->
+
+</body>
+</html>

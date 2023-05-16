@@ -1,0 +1,21 @@
+5.1 vue-router 中的编程式导航API
+vue-router 提供了许多编程式导航的API，其中最常用的导航API 分别是：
+①this.$router.push('hash 地址')
+⚫跳转到指定hash 地址，并[增加]一条历史记录
+②this.$router.replace('hash 地址')
+⚫跳转到指定的hash 地址，并[替换掉]当前的历史记录
+③this.$router.go(数值n)
+⚫实现导航历史前进、后退
+n = -1 时，回退到之前的组件页面
+n = -2 , 后退两次
+n = 1, 前进1次
+n = 2, 前进2次
+超过上下限时，保持不动。
+
+5.5 $router.go 的简化用法
+在实际开发中，一般只会前进和后退一层页面。
+因此vue-router 提供了如下两个便捷方法：
+①$router.back()
+⚫在历史记录中，后退到上一个页面
+②$router.forward()
+⚫在历史记录中，前进到下一个页面

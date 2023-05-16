@@ -1,0 +1,16 @@
+// 声明[全局前置守卫]
+router.beforeEach((to, from, next) => {
+  // 开始判断业务
+  if (to.path === '/main') {
+    // 核心： 通过 to.path 获取到跳转到的那个页面的路径（注意path只包含路径参数）
+    // 先拿 LocalStorage 中的 token 
+    const token = localStorage.getItem('token')
+    if (token) {
+      next() // if(token) 表示 token 有值，放行
+    }else {
+      next('/login') // 如果 token 没值，去登录页面
+    }
+  }else {
+    next() // 不是访问 /main 后台，直接放行
+  }
+})

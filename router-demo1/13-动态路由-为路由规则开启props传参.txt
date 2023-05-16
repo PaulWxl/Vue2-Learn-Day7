@@ -1,0 +1,2 @@
+{path: '/movie/:id', component: Movie, props: true},
+注意要在 组件中自定义属性 props , 且： props: ['id']
